@@ -6,3 +6,14 @@
  */
 
 
+#include <stdio.h>
+
+void main()
+{
+	float x, y,result;
+	printf("Enter two numbers to add: ");
+	fflush(stdin);	fflush(stdout);
+	scanf("%d %d", &x, &y);
+    result=x*y;
+	printf("Sum is : %d", result);
+}
