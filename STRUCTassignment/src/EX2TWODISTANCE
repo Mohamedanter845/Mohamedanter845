@@ -1,0 +1,47 @@
+#include<stdio.h>
+struct SDistance {
+	int m_feet;
+	float m_inch;
+};
+struct SDistance ADD_Dist (struct SDistance x,struct SDistance y)
+{
+	struct SDistance result;
+	result.m_feet=x.m_feet+y.m_feet;
+	result.m_inch=x.m_inch+y.m_inch;
+	while(result.m_inch>=12){
+		result.m_inch-=12;
+	result.m_feet++;
+	}
+return result;
+}
+int main(){
+	struct SDistance D1,D2,sum;
+	printf("Enter information for 1st distance:\n");
+	printf("Enter feet :\n");
+	fflush(stdin);fflush(stdout);
+	scanf("%d",&D1.m_feet);
+	printf("Enter inch :\n");
+	fflush(stdin);fflush(stdout);
+	scanf("%f",&D1.m_inch);
+	printf("Enter information for 2nd distance:\n");
+	fflush(stdin);fflush(stdout);
+	printf("Enter feet :\n");
+	fflush(stdin);fflush(stdout);
+    scanf("%d",&D2.m_feet);
+	printf("Enter inch :\n");
+	fflush(stdin);fflush(stdout);
+	scanf("%f",&D2.m_inch);
+	sum= ADD_Dist(D1,D2);
+	printf("sum of distances=%d -%.2f",sum.m_feet,sum.m_inch);
+}
+
+
+
+
+
+
+
+
+
+
+
